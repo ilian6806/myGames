@@ -1,0 +1,104 @@
+html, body, #wrapper {
+	width: 100%;
+	text-align: center;
+	font-family: Consolas, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	padding: 5px;
+	font-family: Consolas, sans-serif;
+	min-width: 100px;
+}
+
+button:hover, #speed:hover {
+	cursor: pointer;
+	-webkit-box-shadow: 0px 0px 13px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 13px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 13px 0px rgba(50, 50, 50, 0.75);
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 26px;
+}
+
+#startBtn, #stopBtn {
+	border-radius: 5px 5px 5px 25px;
+}
+
+#controlsBtn {
+	border-radius: 5px 5px 25px 5px;
+}
+
+#board, #inner-wrapper,  #outer-wrapper{
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+
+#board td {
+	width:  10px;
+	height: 10px;
+	text-align: center;
+	color: white;
+	font-size: 9px;
+	border-color: #777964;
+}
+
+#board td.snake {
+	background-color: black;
+	border-color: black;
+}
+
+.cell {
+	background-color: #777964;
+}
+
+.food {
+	background: url('../img/food.jpg') 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+#inner-wrapper {
+	border: 1px solid black;
+	vertical-align: middle;
+}
+
+#outer-wrapper {
+	background-color: #777964;
+	border-radius: 13px;
+	padding: 5px 25px 25px 25px;
+	-webkit-box-shadow: 0px 0px 23px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 23px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 23px 0px rgba(50, 50, 50, 0.75);
+}
+
+#settings {
+	margin: 10px 0;
+}
+
+#status {
+	font-weight: bold;
+	margin: 10px 0;
+}
+
+#score {
+	border-bottom: 1px solid black;
+	text-align: left;
+	margin: 5px 0;
+}
+
+#score table {
+	width: 100%;
+}
+
+#speed {
+	background: transparent;
+	font-size: 16px;
+	border-radius: 0;
+	height: 28px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+}
