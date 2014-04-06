@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tetris</title>
+	<script type="text/javascript" src="script/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+	<!-- PAGE CONTENT -->
+	<h1>TETRIS CLASSIC</h1>
+	<div id="content">
+		<div id="wrapper">
+			<div id="outer-wrapper">
+				<div id="inner-wrapper">
+					<div id="score">
+						<table>
+							<tr>
+								<td>Score: </td>
+							</tr>
+							<tr id="points">
+								<td>0</td>
+							</tr>
+						</table>
+						<table>
+							<tr>
+								<td>Hi-Score: </td>
+							</tr>
+							<tr id="best">
+								<td>0</td>
+							</tr>
+						</table>
+						<table>
+							<tr>
+								<td>Lines: </td>
+							</tr>
+							<tr id="lines">
+								<td>0</td>
+							</tr>
+						</table>
+						<table>
+							<tr>
+								<td>Next: </td>
+							</tr>
+							<tr id="mini-table-container">
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div id="menu">
+			<div id="settings">
+				<button id="startBtn">Start</button>
+				<button id="stopBtn" style="display:none">Stop</button>
+				Speed:
+				<select id="speed">
+					<option value="600">1</option>
+					<option value="550">2</option>
+					<option value="450">3</option>
+					<option value="300">4</option>
+					<option value="250" selected>5</option>
+					<option value="200">6</option>
+					<option value="150">7</option>
+					<option value="100">8</option>
+					<option value="70">9</option>
+				</select>
+				<button id="controlsBtn">Controls</button>
+			</div>
+			<div id="status">Press start(enter) !</div>
+			<div id="controls" style="display: none">
+				<img src="img/controls.jpg" alt="controls">
+			</div>
+		</div>
+		</div>
+	</div>
+	<!-- SCRIPT AREA -->
+    <script type="text/javascript" src="script/script.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function() {
+			tetris.bindButtonEvents();
+			$('#best').html(_currBest);
+		});
+    </script>
+</body>
+</html>
