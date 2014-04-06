@@ -290,7 +290,7 @@ var AI = (function(){
         }
         var rand = percents.random();
 
-        //chanse for AI to play ranodom in percents
+        //chance for AI to play ranodom in percents
         var easy   = 25;
         var medium = 9;
         var hard   = 0;
