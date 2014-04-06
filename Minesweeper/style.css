@@ -1,0 +1,103 @@
+*{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+html {
+    background: url('bgr.jpg') 0 0 no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+h1 {
+    width: 305px;
+    margin-left: 80px;
+}
+#display {
+    width: 60px;
+}
+#bombs {
+    width: 155px;
+    margin-left: 110px;
+}
+#display, #bombs {
+    display: inline-block;
+    text-align: center;
+    height: 45px;
+    line-height: 50px;
+}
+h1, #display, #bombs {
+    font-size: 45px;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight:bold; 
+    color: #808080;
+    display: inline-block;
+    padding: 5px 10px;
+    vertical-align: middle;
+    border: 3px outset white;
+    border-radius: 5px;
+    background-color: #BDBDBD;
+    text-shadow:#fff 0px 1px 0, #000 0 -1px 0;
+}
+#timer, #best {
+    display: inline-block;
+    text-align: right;
+    height: 45px;
+    width: 85px;
+    line-height: 50px;
+    font-size: 45px;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight:bold; 
+    color: red;
+    padding: 9px 5px 3px 10px;
+    vertical-align: middle;
+    margin-left: 20px;
+    border: 3px outset white;
+    border-radius: 5px;
+    background-color: black;
+}
+#best {
+    width: 110px;
+    text-align: right;
+}
+#best span {
+    color: red;
+    display: inline-block;
+    float: left;
+    font-size:   11px;
+    line-height: 11px;
+    margin-top: 8px;
+}
+#best div {
+    color: red;
+    display: inline-block;
+    float: right;
+    font-size:   35px;
+    line-height: 44px;
+}
+table {
+    margin-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+}
+td {
+    cursor: pointer;
+    background-image: url('blank.gif');
+    background-size: 100% 100%;
+    font-weight: bold;
+}
+h1, table,  #display, #bombs, #timer, #best {
+    -webkit-box-shadow: 1px 0px 30px rgba(209, 216, 104, 1);
+    -moz-box-shadow:    1px 0px 30px rgba(209, 216, 104, 1);
+    box-shadow:         1px 0px 30px rgba(209, 216, 104, 1);
+}
+.flag {
+    background-image: url('bombflagged.gif');
+    background-size: 100% 100%;
+}
+.notFlag {
+    background-image: url('blank.gif');
+    background-size: 100% 100%;
+}
