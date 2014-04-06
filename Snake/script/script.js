@@ -1,4 +1,4 @@
-//extent Array and String prototypes
+//extend Array and String prototypes
 String.prototype.trim = function(){
 	return this.replace(/^\s+|\s+$/g, '');
 };
@@ -30,9 +30,9 @@ var snake = (function() {
 
 	//selectors
 	var $body      = $('body');
-	var	$wrapper   = $('#wrapper');
-	var	$board     = $('#board');
-	var	$td        = $('#board tr td');
+	var $wrapper   = $('#wrapper');
+	var $board     = $('#board');
+	var $td        = $('#board tr td');
 	var $startBtn  = $('#startBtn');
 	var $stopBtn   = $('#stopBtn');
 	var $cntrBtn   = $('#controlsBtn');
@@ -48,9 +48,9 @@ var snake = (function() {
 	_boardSize   = 20;
 	_tdSizeIndex = 0.013;
 	_speed       = 1000;
-	_boardMap 	 = Create2DArray(_boardSize);
+	_boardMap    = Create2DArray(_boardSize);
 	_interval    = 0;
-	_msg 		 = {
+	_msg 	     = {
 		pressStart : 'Press start(enter) !',
 		paused : 'Paused',
 		loose : 'You loose !'
@@ -59,13 +59,13 @@ var snake = (function() {
 	//main variables
 	_snake       = [[7,5], [7,6], [7,7]];
 	_direction   = 2; //right
-	_food 		 = [];
+	_food 	     = [];
 	_foodCount   = 0;
 	_points      = 0;
 	_foodVal     = 0;
 	_isDone      = true;
 	_paused      = false;
-	_currBest  	 = Number(localStorage.getItem('snakeBest'));
+	_currBest    = Number(localStorage.getItem('snakeBest'));
 
 
 	function init(){
@@ -336,10 +336,10 @@ var snake = (function() {
 	        case 32:
 	        	if(_paused && $status.html() == _msg.paused){
 	        		_interval = setInterval(function(){
-						moveSnake(_direction);
-					}, _speed);
-					_paused = false;
-					$status.html('');
+				    moveSnake(_direction);
+				}, _speed);
+				_paused = false;
+				$status.html('');
 	        	}
 	        	else if(!_paused 
 	        		&& $status.html() !== _msg.pressStart 
@@ -359,16 +359,16 @@ var snake = (function() {
 	        case 107:
 	        	if($speed.prop('disabled') !== true){
 	        		$('#speed')
-		        		.find('option:selected').prop('selected', false)
-		        		.next().prop('selected', true);
+		        	    .find('option:selected').prop('selected', false)
+		        	    .next().prop('selected', true);
 	        	}
 	        break;
 	        //-
 	        case 109:
 	        	if($speed.prop('disabled') !== true){
 	        		$('#speed')
-		        		.find('option:selected').prop('selected', false)
-		        		.prev().prop('selected', true);
+		        	    .find('option:selected').prop('selected', false)
+		        	    .prev().prop('selected', true);
 	        	}
 	        break;
 		}
