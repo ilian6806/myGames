@@ -115,8 +115,8 @@ h1 {
 	font-size: 16px;
 	border-radius: 0;
 	height: 28px;
-    background-color: #ddd;
-    border: 1px solid #ccc;
+        background-color: #ddd;
+        border: 1px solid #ccc;
 }
 
 #points, #best, #lines {
