@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TicTacToe</title>
+	<script type="text/javascript" src="script/jquery-1.10.2.min.js"></script>
+	<!--<script type="text/javascript" src="script/jquery.mobile-1.3.2.min.js"></script>-->
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+	<!-- PAGE CONTENT -->
+	<div id="scores">
+		<table id="score-table">
+			<tr>
+				<td id="first-name"></td>
+				<td id="first-score"></td>
+			</tr>
+			<tr>
+				<td id="second-name"></td>
+				<td id="second-score"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button id="reset-stats">Reset</button></td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="wrapper">
+		<table id="main-board" border="1">
+			<tr id="row-1">
+				<td id="11" data-row="1" data-col="1"></td>
+				<td id="12" data-row="1" data-col="2"></td>
+				<td id="13" data-row="1" data-col="3"></td>
+			</tr>
+			<tr id="row-2">
+				<td id="21" data-row="2" data-col="1"></td>
+				<td id="22" data-row="2" data-col="2"></td>
+				<td id="23" data-row="2" data-col="3"></td>
+			</tr>
+			<tr id="row-3">
+				<td id="31" data-row="3" data-col="1"></td>
+				<td id="32" data-row="3" data-col="2"></td>
+				<td id="33" data-row="3" data-col="3"></td>
+			</tr>
+		</table>
+	</div>
+
+	<!-- SCRIPT AREA -->
+    <script type="text/javascript" src="script/script.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function() {
+			game.init();
+		});
+    </script>
+</body>
+</html>
