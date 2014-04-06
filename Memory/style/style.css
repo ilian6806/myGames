@@ -1,0 +1,149 @@
+#wrapper {
+    display: inline-block;
+    width:  410px;
+    height: 410px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#wrapper > div {
+    display: inline-block;
+    width:  100px;
+    height: 100px;
+    border: 1px solid blue;
+    margin-top: -5px;
+    margin-right: -1px;
+}
+
+img {
+    margin: 0;
+    display: inline-block;
+}
+
+div {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+#header {
+    display: block;
+    border: 1px solid blue;
+    border-radius: 20px;
+    width:  100%;
+    height: 100px;
+    margin-bottom: 40px;
+    background: #346399; /* Old browsers */
+    background: -moz-linear-gradient(top,  #346399 1%, #2989d8 50%, #7db9e8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#346399), color-stop(50%,#2989d8), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #346399 1%,#2989d8 50%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #346399 1%,#2989d8 50%,#7db9e8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #346399 1%,#2989d8 50%,#7db9e8 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #346399 1%,#2989d8 50%,#7db9e8 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#346399', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+}
+
+#content {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#logo {
+    display: inline-block;
+    width:  320px;
+    height: 55px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: verdana, arial, sans-serif;    
+    vertical-align: middle;
+    text-align: center;
+    margin-left: 30px;
+    margin-top:  20px;
+}
+
+#best, #time {
+    display: inline-block;
+    float: right;
+    width:  100px;
+    height: 60px;
+    font-family: consolas, arial, sans-serif;
+    font-size:   45px;
+    line-height: 58px;
+    background-color: white;
+    margin-right: 20px;
+    margin-top:   18px;
+    border: 2px groove white;
+    border-radius: 10px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#ninja1 {
+    display: inline-block;
+    width:  320px;
+    height: 500px;
+    margin-right: 20px;
+}
+
+#ninja2 {
+    display: inline-block;
+    width:  365px;
+    height: 500px;
+    margin-left: 20px;
+}
+
+#ground {
+    display: block;
+    height: auto;
+    background-color: brown;
+    margin-top: -15px;
+}
+
+.lable {
+    float: right;
+    color: white;
+    line-height: 55px;  
+    font-size:   26px;
+    font-weight: bold;
+    font-family: verdana, arial, sans-serif;
+    width:  100px;
+    height: 60px;
+    margin-right: 20px;
+    margin-top:   20px;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+}
+
+.nonclickable {
+     pointer-events: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    #ninja2 {
+      display: none;
+    }
+}
+@media only screen and (max-width: 870px) {
+    #header  {
+      height: 200px;
+    }
+    #logo {
+        display: block;
+    }
+}
+@media only screen and (max-width: 870px) {
+    #ninja1 {
+      display: none;
+    }
+}
