@@ -1,8 +1,8 @@
 //selectors
 var $body      = $('body');
-var	$wrapper   = $('#wrapper');
-var	$board     = $('#board');
-var	$td        = $('#board tr td');
+var $wrapper   = $('#wrapper');
+var $board     = $('#board');
+var $td        = $('#board tr td');
 var $miniTd    = $('#mini-board tr td');
 var $startBtn  = $('#startBtn');
 var $stopBtn   = $('#stopBtn');
@@ -12,7 +12,7 @@ var $currSpeed = $('#speed option:selected');
 var $points    = $('#points');
 var $lines     = $('#lines');
 var $status    = $('#status');
-var $best 	   = $('#best');
+var $best      = $('#best');
 var $controls  = $('#controls');
 
 //global functions
@@ -417,9 +417,9 @@ var tetris = (function() {
 	_tdSizeIndex  = 0.013;
 	_speed        = 1000;
 	_boardMapOrig = create2DArray(_boardRols);
-	_topCenter	  = Math.ceil(((_boardCols + 1) / 2) - 2);
+	_topCenter    = Math.ceil(((_boardCols + 1) / 2) - 2);
 	_interval     = 0;
-	_msg 		  = {
+	_msg 	      = {
 		pressStart : 'Press start(enter) !',
 		paused : 'Paused',
 		lose : 'You lose !',
@@ -427,19 +427,19 @@ var tetris = (function() {
 	};
 
 	//main variables
-	_brick 		 = {};
-	_nextBrick   = {};
-	_points      = 0;
-	_lines		 = 0;
-	_linesVal    = 0;
+	_brick 	   = {};
+	_nextBrick = {};
+	_points    = 0;
+	_lines	   = 0;
+	_linesVal  = 0;
 
 	//game status
-	_isDone      = true;
-	_paused      = false;
-	_active      = false;
+	_isDone = true;
+	_paused = false;
+	_active = false;
 
 	//user top score
-	_currBest  	 = Number(localStorage.getItem('tetrisBest'));
+	_currBest = Number(localStorage.getItem('tetrisBest'));
 
 	//create the 2D array and fill it with 0
 	for(var i = 0; i < _boardRols; i++) {
