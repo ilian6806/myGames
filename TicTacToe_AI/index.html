@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TicTacToe</title>
+	<script type="text/javascript" src="script/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+	<!-- PAGE CONTENT -->
+	<div id="content">
+		<div id="scores">
+			<table id="score-table">
+				<tr>
+					<td id="first-name"></td>
+					<td id="first-score"></td>
+				</tr>
+				<tr>
+					<td id="second-name"></td>
+					<td id="second-score"></td>
+				</tr>
+				<tr>
+					<td id="reset-btn-cell">
+						<button id="reset-stats">Reset</button>
+					</td>
+					<td>
+						<button id="change-name">Change name</button>
+					</td>
+				</tr>
+			</table>
+			<div id="difficulty">
+				<strong>Difficulty:</strong>
+				<input type="radio" name="diff" value="0" id="diff0"><label for="diff0">Easy</label>
+				<input type="radio" name="diff" value="1" id="diff1" checked><label for="diff1">Medium</label>
+				<input type="radio" name="diff" value="2" id="diff2"><label for="diff2">Hard</label>
+				<div id="select-time">
+							Computer thinks 
+							<select id="timeToThink">
+								<option value="0">0</option>
+								<option value="100">0.1</option>
+								<option value="200">0.2</option>
+								<option value="300">0.3</option>
+								<option value="400">0.4</option>
+								<option value="500" selected>0.5</option>
+								<option value="600">0.6</option>
+								<option value="700">0.7</option>
+								<option value="800">0.8</option>
+								<option value="900">0.9</option>
+								<option value="1000">1</option>
+							</select>
+							<span id="seconds">seconds.</span>
+						</div>
+			</div>
+		</div>
+
+		<div id="wrapper">
+			<table id="main-board" border="1">
+				<tr id="row-1">
+					<td id="11" data-row="1" data-col="1"></td>
+					<td id="12" data-row="1" data-col="2"></td>
+					<td id="13" data-row="1" data-col="3"></td>
+				</tr>
+				<tr id="row-2">
+					<td id="21" data-row="2" data-col="1"></td>
+					<td id="22" data-row="2" data-col="2"></td>
+					<td id="23" data-row="2" data-col="3"></td>
+				</tr>
+				<tr id="row-3">
+					<td id="31" data-row="3" data-col="1"></td>
+					<td id="32" data-row="3" data-col="2"></td>
+					<td id="33" data-row="3" data-col="3"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!-- SCRIPT AREA -->
+    <script type="text/javascript" src="script/script.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function() {
+			game.init();
+			game.bindButtonEvents();
+		});
+    </script>
+</body>
+</html>

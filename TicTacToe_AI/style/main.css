@@ -1,0 +1,95 @@
+html, body {
+	display: block;
+	width:  100%;
+	height: 100%;
+	padding: 1% 0;
+	margin:  0;
+	font-family: Comic Sans MS, "lobster 1.4", arial;
+	font-size: 60px;
+	color: black;
+	text-align: center;
+}
+
+html{
+	background: url("../img/sand.jpeg");
+	background-size: 100% 100%;
+}
+
+button {
+	height:  100px;
+	border: 0;
+	font-family: Comic Sans MS, "lobster 1.4", arial;
+	font-size: 20px;
+	background: url("../img/shell.png");
+	background-size: 100% 100%;
+	padding: 15px;
+}
+
+button:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+li {
+	list-style-type: none;
+}
+
+select{
+	background-color: transparent;
+	font-weight: bold;
+	border: none;
+	font-size: 17px;
+}
+
+select:hover {
+	cursor: pointer;
+}
+
+#main-board, #win-wrapper{
+	margin: 0 auto;
+}
+
+#win-msg {
+	margin: 20px;
+}
+
+#win-wrapper {
+	overflow: hidden;
+	width: 100%;
+}
+
+#main-board tr td {
+	width:  100px;
+	height: 100px;
+}
+
+#scores {
+	float: right;
+}
+
+#wrapper {
+	float: left;
+	margin-top: 2%;
+	margin-left: 10%;
+}
+
+#score-table {
+	vertical-align: middle;
+}
+
+#reset-btn-cell {
+	text-align: right;
+}
+
+#first-name, #second-name {
+	text-align: right;
+}
+
+#difficulty {
+	font-size:  25px;
+	margin-top: 17px;
+}
+
+#select-time {
+	font-size: 20px;
+}
