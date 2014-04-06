@@ -1,0 +1,120 @@
+html {
+    background: url('bgr.jpg') 0 0 no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+body {
+    font-size: 30px;
+}
+canvas {
+    vertical-align: middle;
+    margin-right: 100px;
+}
+input[type="text"] {
+    width:  50px;
+    height: 50px;
+    font-size: 30px;
+    margin-top: 100px;
+    text-align: center;
+    border: 3px outset #97B9D4;
+    border-radius: 5px;
+    padding: 3px; 
+}
+input[type="button"] {
+    width:  50px;
+    height: 50px;
+    color: white;
+    background-color: #A6C5DC;
+    margin-right: 20px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    border: 3px outset #97B9D4;
+    border-radius: 5px;
+    padding: 3px; 
+}
+input[type="button"]:hover, #submit:hover {  
+    cursor: pointer;
+    color: #A6C5DC;
+    background-color: #DDE8EB;
+    border: 3px inset #97B9D4;
+}
+table td {
+    vertical-align: middle;
+    font-size: 30px;
+    color: black;
+    background-color: white;
+    border: 3px outset #97B9D4;
+    border-radius: 5px;
+    padding: 5px;
+}
+#your {
+    width: 155px;
+}
+#missed, #record, #total {
+    height: 40px;
+    width: 120px;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: black;
+}
+#score {
+    height: 40px;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    background-color: white;
+}
+#submit {
+    float: right;
+    background-color: #A6C5DC;
+    border: 3px outset #97B9D4;
+    border-radius: 5px 5px 5px 5px;
+    color: white;
+    height: 53px;
+    width: 80px;
+    margin-bottom: 24px;
+    margin-right: 1px;
+    margin-top: 2px;
+    padding: 10px;
+}
+#display {
+    float: left;
+}
+#display2 {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    background-color: white;
+    padding: 5px; 
+    display: inline-block;
+    border: 3px outset #97B9D4;
+    border-radius: 5px;
+}
+* {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}  
+input[type="text"]#symbol {
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -o-user-select: text;
+    user-select: text;
+} 
+#board {
+    float: right;
+}
+#board td {
+    height: 20px;
+}
+#first, #sc1 {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}

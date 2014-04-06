@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Бесеница</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body onload ="char(); game();">
+    <div id="display">
+        <canvas width="380" height="500">
+            Canvas not supported
+        </canvas>
+        <table>
+            <tr>
+                <td>Checked:</td>
+                <td><div id = "missed" style="text-transform: uppercase;"></div></td>
+            </tr>
+            <tr>
+                <td>Your score:</td>
+                <td><div id = "score"></div></td>
+            </tr>
+        </table>
+    </div>
+    <table id="board">
+        <tr>
+            <td><b>Name</b></td>
+            <td><b>Score</b></td>
+        </tr>
+        <tr>
+            <td id="first"></td>
+            <td id="sc1"></td>
+        </tr>
+        <tr>
+            <td id="second"></td>
+            <td id="sc2"></td>
+        </tr>
+        <tr>
+            <td id="third"></td>
+            <td id="sc3"></td>
+        </tr>       
+        <tr>
+            <td id="fourth"></td>
+            <td id="sc4"></td>
+        </tr>
+        <tr>
+            <td id="fifth"></td>
+            <td id="sc5"></td>
+        </tr>
+    </table>
+    <input type="button" value="Submit" id="submit" onclick="submit()">
+    <input type="text" id="symbol" maxlength="1"/>
+    <input type="button" value="Try" onclick="play()" id="btn"/><br/>
+    <div id="display2"></div>
+    <table>
+        <tr>
+            <td><div id = "your">Total score:</div></td>
+            <td><div id = "total"></div></td>
+        </tr>
+        <tr>
+            <td><div id = "your">Your record:</div></td>
+            <td><div id = "record"></div></td>
+        </tr>
+    </table>
+    <!-- javascript at the bottom for fast page loading -->
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
