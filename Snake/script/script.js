@@ -1,4 +1,4 @@
-//extent Array and String prototypes
+//extend Array and String prototypes
 String.prototype.trim = function(){
 	return this.replace(/^\s+|\s+$/g, '');
 };
