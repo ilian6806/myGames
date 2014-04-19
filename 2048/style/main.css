@@ -1,0 +1,217 @@
+body {
+	margin: 50px auto;
+	padding: 0;
+	font-family: Tahoma, Arial, Verdana, sans-serif;
+	text-align: center;
+	overflow: hidden;
+}
+
+#board {
+	width:  250px;
+	height: 250px;
+	margin: 0 auto;
+	border-collapse: collapse;
+	border-color: #BCAEA1;
+	background-color: #BCAEA1;
+}
+
+#board tr td {
+	width:  50px;
+	height: 50px;
+	border: 5px solid #BBAD9D;
+	border-radius: 12px;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+}
+
+#wrapper {
+	height: 250px;
+	vertical-align: middle;
+	background-color: #BCAEA1;
+	border-radius: 3px;
+}
+
+#wrapper, #header, #sub-header {
+	width:  252px;
+	margin: 0 auto;
+}
+
+#header {
+	height: 55px;
+}
+
+#sub-header {
+	margin-bottom: 15px;
+}
+
+#sub-header table tr td:last-child {
+	text-align: right;
+}
+
+#sub-header table td {
+	padding: 0;
+	text-align: left;
+}
+
+#sub-header table {
+	width: 100%;
+}
+
+#title {
+	font-weight: bold;
+	font-size: 42px;
+	color: #756E64;
+	float: left;
+}
+
+#score  {
+	float: right;
+	margin-top: 4px;
+}
+
+#score td {
+	width: 48px;
+	color: #FFF;
+	background-color: #BDACA2;
+	border-radius: 3px;
+	padding: 3px;
+	text-align: center;
+}
+
+.score-title {
+	font-size: 12px;
+}
+
+#game-info, #new-game-info {
+	margin: 0;
+	padding: 0;
+}
+
+#game-info {
+	font-size: 8px;
+	font-weight: bold;
+}
+
+#new-game-btn, #stats-btn {
+	font-size: 12px;
+	color: #FFF;
+	background-color: #907A63;
+	border: 0;
+	border-radius: 3px;
+	padding: 5px;
+}
+
+#new-game-btn:hover, #stats-btn:hover {
+	background-color: #BDACA2;
+	cursor: pointer;
+}
+
+#statistics {
+	width:  200px;
+	height: 250px;
+	background-color: #BCAEA1;
+	position: absolute;
+	border-radius: 3px 0 0 3px;
+	text-align: center;
+	right: -4px;
+	top: 134px;
+	padding-right: 3px;
+	margin-right: -205px;
+}
+
+#stats-btn {
+	margin-top: 15px;
+	width: 100px;
+}
+
+#stats-header, #stats-content, #stats-reset-btn {
+	color: #FFF;
+	background-color: #907A63;
+	margin: 0 auto;
+	display: block;
+	width: 90%;
+}
+
+#stats-header p {
+	margin: 5px auto;
+	text-align: left;
+	font-weight: bold;
+	padding: 3px 0 5px 10px;
+}
+
+#stats-content table {
+	width: 100%;
+}
+
+#stats-reset-btn {
+ 	border: 0;
+ 	height: 30px;
+ 	margin: 3px auto;
+ 	padding: 3px 0;
+	margin-top: 5px;
+}
+
+#stats-reset-btn:hover {
+	background-color: #CDC1B5;
+	cursor: pointer;
+}
+
+.cell-0 {
+	background-color: #CDC1B5;
+}
+
+.cell-2 {
+	background-color: #EEE4DA;
+	color: #766E66;
+}
+
+.cell-4 {
+	background-color: #ECE0C9;
+	color: #786E63;
+}
+
+.cell-8 {
+	background-color: #F2B179;
+	color: #F8F4EF;
+}
+
+.cell-16 {
+	background-color: #F59563;
+	color: #FFF;
+}
+
+.cell-32 {
+	background-color: #F67C5F;
+	color: #FFF;
+}
+
+.cell-64 {
+	background-color: #F65E3B;
+	color: #FFF;
+}
+
+.cell-128 {
+	background-color: #ECCD71;
+	color: #FFF;
+}
+
+.cell-256 {
+	background-color: #ECCB62;
+	color: #FFF;
+}
+
+.cell-512 {
+	background-color: #EBC351;
+	color: #FFF;
+}
+
+.cell-1024 {
+	background-color: #EDC53F;
+	color: #FFF;
+}
+
+.cell-2048 {
+	background-color: #ECC400;
+	color: #FFF;
+}

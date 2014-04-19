@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2048</title>
+	<script type="text/javascript" src="script/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+	<!-- PAGE CONTENT -->
+	<div id="header">
+		<div id="title">2048</div>
+		<table id="score">
+			<tr>
+				<td><div class="score-title">Score</div><div id="current-score">0</div></td>
+				<td><div class="score-title">Best</div><div id="best-score"></div></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div id="sub-header">
+		<table>
+			<tr>
+				<td><p id="game-info">Join the numbers and get to the <b>2048</b> tile! </p></td>
+				<td><button id="new-game-btn" style="display: none">New Game</button></td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="content">
+		<div id="wrapper"></div>
+		<button id="stats-btn">Statistics</button>
+	</div>
+
+	<div id="statistics">
+
+		<div id="stats-header">
+			<p>Win:  <span id="win"></span></p>
+			<p>Lose: <span id="lose"></span></p>
+		</div>
+
+		<div id="stats-content">
+			<table>
+				<thead><th colspan="3">high scores</th></thead>
+				<tr>
+					<td>1:</td>
+					<td id="score-1"></td>
+					<td id="level-1"></td>
+				</tr>
+				<tr>
+					<td>2:</td>
+					<td id="score-2"></td>
+					<td id="level-2"></td>
+				</tr>
+				<tr>
+					<td>3:</td>
+					<td id="score-3"></td>
+					<td id="level-3"></td>
+				</tr>
+				<tr>
+					<td>4:</td>
+					<td id="score-4"></td>
+					<td id="level-4"></td>
+				</tr>
+				<tr>
+					<td>5:</td>
+					<td id="score-5"></td>
+					<td id="level-5"></td>
+				</tr>
+			</table>
+		</div>
+		<button id="stats-reset-btn">reset</button>
+	</div>
+	
+	<!-- SCRIPT AREA -->
+    <script type="text/javascript" src="script/script.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function() {
+			game.createBoard('#wrapper', 4, 4);
+			game.start();
+		});
+    </script>
+</body>
+</html>
