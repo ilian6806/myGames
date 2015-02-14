@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Galaga</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="board">
+        <div id="level-wrapper"><span>LEVEL:</span> <span id="level">1</span></div>
+        <div id="score-wrapper"><span>SCORE:</span> <span id="score">0000000</span></div>
+        <div id="best-wrapper">&nbsp;<span>BEST:</span> <span id="best">0000000</span></div>
+    </div>
+
+    <canvas id="stage"></canvas>
+
+    <div id="dialog-overlay" style="display: none;"></div>
+    <div id="dialog" style="display: none;">
+        <div id="dialog-header">123</div>
+        <div id="dialog-content"></div>
+        <div id="dialog-footer"></div>
+    </div>
+
+    <img src="img/soundon.png" width="30" height="30" id="sound-icon">
+    <img src="img/fullscreen-icon.png" width="30" height="30" id="fullscreen-icon">
+
+    <script type="text/javascript" src="script/rAF.js"></script>
+    <script type="text/javascript" src="script/helpers.js"></script>
+    <script type="text/javascript" src="script/keyscontroller.js"></script>
+    <script type="text/javascript" src="script/galaga.js"></script>
+    <script type="text/javascript">
+        Galaga.init().bindEvents();
+    </script>
+</body>
+</html>
