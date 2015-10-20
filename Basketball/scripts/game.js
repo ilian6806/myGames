@@ -1,106 +1,97 @@
+var Basketball = (function () {
 
-$(document).ready(function() {
-    game();
-});
+    var 
+        MAX_POINTS = 200;
+        MAX_TIME = 30;
+        SCREEN_OFFSET = 300;
+        MIN_LEFT_OFFSET = 10;
+        MIN_TOP_OFFSET = 120;
 
-//prevent images dragging
-$('.static').on('dragstart', function(event) { event.preventDefault(); });
+    var $view = {};
 
-function game(){
-    var MAX_POINTS      = 200;
-    var MAX_TIME        = 30;
-    var SCREEN_OFFSET   = 300;
-    var MIN_LEFT_OFFSET = 10;
-    var MIN_TOP_OFFSET  = 120;
-
-    $('#score').html(0);
-
-    //check for cookie
-    if(getCookie('bestScoreBasket')){
-        $('#best').html(getCookie('bestScoreBasket'));
+    function initializeComponents() {
+        $view = {
+            html: $('html'),
+            best: $('#best'),
+            ball: $('#ball'),
+            basket: $('#basket'),
+            score: $('#score'),
+            timer: $('#timer'),
+            statics: $('.static'),
+        };
     }
-    
-    var maxHeight = $('html').height() - $('#basket').height() - SCREEN_OFFSET;
-    var maxWidth  = $('html').width()  - $('#basket').width()  - SCREEN_OFFSET;
 
-    //add functionality to images
-    $('#ball').draggable({cursor: "pointer"});
-    $('#basket').droppable({
-      drop: function() {
+    function randomFromInterval(from,to) {
+        return Math.floor(Math.random()  *(to - from + 1) + from);
+    }
 
-            var randHeight = randomFromInterval(MIN_TOP_OFFSET,maxHeight);
-            var randWidth  = randomFromInterval(MIN_LEFT_OFFSET,maxWidth);
-            
-            $('#score').html($('#score').html()*1 + 1);
-            $('#basket').css('top', randHeight);
-            $('#basket').css('left', randWidth);
-      }
-    });
+    function start() {
 
-    //make the ball bounce
-    for (var i = 0; i <= MAX_POINTS; i++) {
-        $('#ball').animate({width : '300px', height: '300px'}, 800);
-        $('#ball').animate({width : '100px', height: '100px' },800);
-    };
+        initializeComponents();
 
-    //start the timer
-    var time = MAX_TIME;
-    $('#timer').html(time)
+        //prevent images dragging
+        $view.statics.on('dragstart', function(event) { event.preventDefault(); });
 
-    setInterval(function(){
-        time -= 1;
-        $('#timer').html(time)
-        if(time == 0){
-            var score = $('#score').html();
+        $view.score.html(0);
 
-            if(score>(getCookie('bestScoreBasket'))){
-                setCookie("bestScoreBasket",score,1000);
-                alert('Game over ! '+score+' ! This is a high score !');
-                //update best score
-                $('#best').html(getCookie('bestScoreBasket'))
-            }
-            else {
-                alert('Game over!');
-            }
-
-            //reset timer and score
-            time  = MAX_TIME;
-            score = 0;
-            $('#timer').html(MAX_TIME)
-            $('#score').html(0);
+        //check for cookie
+        if (cookie.get('bestScoreBasket')) {
+            $view.best.html(cookie.get('bestScoreBasket'));
         }
-    },1000)
-}
+        
+        var maxHeight = $view.html.height() - $view.basket.height() - SCREEN_OFFSET;
+        var maxWidth  = $view.html.width()  - $view.basket.width()  - SCREEN_OFFSET;
 
-//cookies
-function setCookie(c_name,value,exdays){
-    var exdate=new Date();
-    exdate.setDate(exdate.getDate() + exdays);
-    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
-    document.cookie=c_name + "=" + c_value;
-}
+        // add functionality to images
+        $view.ball.draggable({ cursor: 'pointer' });
+        $view.basket.droppable({
+            drop: function() {
 
-function getCookie(c_name){
-    var c_value = document.cookie;
-    var c_start = c_value.indexOf(" " + c_name + "=");
-    if (c_start == -1){
-      c_start = c_value.indexOf(c_name + "=");
-    }
-    if (c_start == -1){
-      c_value = null;
-    }
-    else {
-        c_start = c_value.indexOf("=", c_start) + 1;
-        var c_end = c_value.indexOf(";", c_start);
-        if (c_end == -1) {
-        c_end = c_value.length;
-        }
-        c_value = unescape(c_value.substring(c_start,c_end));
-    }
-    return c_value;
-}
+                var randHeight = randomFromInterval(MIN_TOP_OFFSET,maxHeight);
+                var randWidth  = randomFromInterval(MIN_LEFT_OFFSET,maxWidth);
+                
+                $view.score.html($view.score.html() * 1 + 1);
+                $view.basket.css('top', randHeight);
+                $view.basket.css('left', randWidth);
+            }
+        });
 
-//random number from interval
-function randomFromInterval(from,to){
-    return Math.floor(Math.random()*(to-from+1)+from);
-}
+        // make the ball bounce
+        for (var i = 0; i <= MAX_POINTS; i++) {
+            $view.ball.animate({ width : '300px', height: '300px' }, 800);
+            $view.ball.animate({ width : '100px', height: '100px' }, 800);
+        };
+
+        // start the timer
+        var time = MAX_TIME;
+        $view.timer.html(time)
+
+        setInterval(function() {
+
+            $view.timer.html(--time);
+
+            if (time == 0) {
+
+                var score = parseInt($view.score.html());
+
+                if (score > parseInt(cookie.get('bestScoreBasket'))) {
+                    cookie.set('bestScoreBasket', score, 1000);
+                    alert('Game over ! '+ score +' ! This is a high score !');
+                    // update best score
+                    $view.best.html(cookie.get('bestScoreBasket'));
+                } else {
+                    alert('Game over!');
+                }
+
+                // reset timer and score
+                time = MAX_TIME;
+                score = 0;
+                $view.timer.html(MAX_TIME);
+                $view.score.html(0);
+            }
+        }, 1000);
+    }
+
+    return { start: start };
+
+}());
